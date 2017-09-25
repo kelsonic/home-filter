@@ -7,7 +7,7 @@ class CreateHouses < ActiveRecord::Migration[5.1]
       t.integer :bedrooms
       t.integer :studies
       t.integer :bathrooms
-      t.date :year_built
+      t.string :year_built
       t.integer :house_modernity
       t.integer :kitchen_modernity
       t.boolean :internet

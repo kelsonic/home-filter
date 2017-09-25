@@ -8,7 +8,7 @@ House.create!(
   bedrooms: -1,
   studies: -1,
   bathrooms: -1,
-  year_built: -1,
+  year_built: nil,
   house_modernity: 6,
   kitchen_modernity: 4,
   internet: true,
