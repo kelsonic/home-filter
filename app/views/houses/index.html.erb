@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Houses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Acres</th>
+      <th>Link</th>
+      <th>Bedrooms</th>
+      <th>Studies</th>
+      <th>Bathrooms</th>
+      <th>Year built</th>
+      <th>House modernity</th>
+      <th>Kitchen modernity</th>
+      <th>Internet</th>
+      <th>Fiber optic</th>
+      <th>Water solved</th>
+      <th>Sewage solved</th>
+      <th>Off grid</th>
+      <th>Home square feet</th>
+      <th>Bright</th>
+      <th>Ac</th>
+      <th>House type</th>
+      <th>Can have livestock</th>
+      <th>Has fencing</th>
+      <th>Fencing type</th>
+      <th>Landscape</th>
+      <th>Barns</th>
+      <th>Barn modernity</th>
+      <th>Road</th>
+      <th>Worksheds</th>
+      <th>Houseoverlooksland</th>
+      <th>Streams</th>
+      <th>Stream year round</th>
+      <th>Address</th>
+      <th>State</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= house.price %></td>
+        <td><%= house.acres %></td>
+        <td><%= house.link %></td>
+        <td><%= house.bedrooms %></td>
+        <td><%= house.studies %></td>
+        <td><%= house.bathrooms %></td>
+        <td><%= house.year_built %></td>
+        <td><%= house.house_modernity %></td>
+        <td><%= house.kitchen_modernity %></td>
+        <td><%= house.internet %></td>
+        <td><%= house.fiber_optic %></td>
+        <td><%= house.water_solved %></td>
+        <td><%= house.sewage_solved %></td>
+        <td><%= house.off_grid %></td>
+        <td><%= house.home_square_feet %></td>
+        <td><%= house.bright %></td>
+        <td><%= house.ac %></td>
+        <td><%= house.house_type %></td>
+        <td><%= house.can_have_livestock %></td>
+        <td><%= house.has_fencing %></td>
+        <td><%= house.fencing_type %></td>
+        <td><%= house.landscape %></td>
+        <td><%= house.barns %></td>
+        <td><%= house.barn_modernity %></td>
+        <td><%= house.road %></td>
+        <td><%= house.worksheds %></td>
+        <td><%= house.houseOverlooksLand %></td>
+        <td><%= house.streams %></td>
+        <td><%= house.stream_year_round %></td>
+        <td><%= house.address %></td>
+        <td><%= house.state %></td>
+        <td><%= house.city %></td>
+        <td><%= link_to 'Show', house %></td>
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New House', new_house_path %>

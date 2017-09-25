@@ -1,0 +1,2 @@
+json.extract! house, :id, :price, :acres, :link, :bedrooms, :studies, :bathrooms, :year_built, :house_modernity, :kitchen_modernity, :internet, :fiber_optic, :water_solved, :sewage_solved, :off_grid, :home_square_feet, :bright, :ac, :house_type, :can_have_livestock, :has_fencing, :fencing_type, :landscape, :barns, :barn_modernity, :road, :worksheds, :houseOverlooksLand, :streams, :stream_year_round, :address, :state, :city, :created_at, :updated_at
+json.url house_url(house, format: :json)

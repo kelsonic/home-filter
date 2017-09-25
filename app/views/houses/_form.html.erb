@@ -1,0 +1,177 @@
+<%= form_with(model: house, local: true) do |form| %>
+  <% if house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
+
+      <ul>
+      <% house.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :house_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acres %>
+    <%= form.text_field :acres, id: :house_acres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_area :link, id: :house_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bedrooms %>
+    <%= form.number_field :bedrooms, id: :house_bedrooms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :studies %>
+    <%= form.number_field :studies, id: :house_studies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bathrooms %>
+    <%= form.number_field :bathrooms, id: :house_bathrooms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_built %>
+    <%= form.date_select :year_built, id: :house_year_built %>
+  </div>
+
+  <div class="field">
+    <%= form.label :house_modernity %>
+    <%= form.number_field :house_modernity, id: :house_house_modernity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kitchen_modernity %>
+    <%= form.number_field :kitchen_modernity, id: :house_kitchen_modernity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internet %>
+    <%= form.check_box :internet, id: :house_internet %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fiber_optic %>
+    <%= form.check_box :fiber_optic, id: :house_fiber_optic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :water_solved %>
+    <%= form.check_box :water_solved, id: :house_water_solved %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sewage_solved %>
+    <%= form.check_box :sewage_solved, id: :house_sewage_solved %>
+  </div>
+
+  <div class="field">
+    <%= form.label :off_grid %>
+    <%= form.check_box :off_grid, id: :house_off_grid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home_square_feet %>
+    <%= form.number_field :home_square_feet, id: :house_home_square_feet %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bright %>
+    <%= form.check_box :bright, id: :house_bright %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ac %>
+    <%= form.check_box :ac, id: :house_ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :house_type %>
+    <%= form.text_field :house_type, id: :house_house_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :can_have_livestock %>
+    <%= form.check_box :can_have_livestock, id: :house_can_have_livestock %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_fencing %>
+    <%= form.check_box :has_fencing, id: :house_has_fencing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fencing_type %>
+    <%= form.text_field :fencing_type, id: :house_fencing_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :landscape %>
+    <%= form.text_field :landscape, id: :house_landscape %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barns %>
+    <%= form.number_field :barns, id: :house_barns %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barn_modernity %>
+    <%= form.number_field :barn_modernity, id: :house_barn_modernity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :road %>
+    <%= form.text_field :road, id: :house_road %>
+  </div>
+
+  <div class="field">
+    <%= form.label :worksheds %>
+    <%= form.number_field :worksheds, id: :house_worksheds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :houseOverlooksLand %>
+    <%= form.check_box :houseOverlooksLand, id: :house_houseOverlooksLand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :streams %>
+    <%= form.number_field :streams, id: :house_streams %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stream_year_round %>
+    <%= form.check_box :stream_year_round, id: :house_stream_year_round %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_area :address, id: :house_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :house_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :house_city %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
